@@ -31,4 +31,10 @@ The probable rules could for the above mention transaction could be:
 11. Milk &rarr; Butter
 12. Milk &rarr; Jam
 
-
+###Terminologies:
+#####1. Frequent Item set: Items which are bought most frequently e.g Bread occuers in 80%(4 divides 5) of purchases
+#####2. Support: The fraction of which our item set appeared in the total number of transaction. e.g the support for Bread & Butter is the number of times they together appeared in a data set to the total number of transaction(3/5 =.06 )
+#####3. Confidence :  is conditional probability that customer buy product A will also buy product B. It measures how often items B appear in transactions that contain A.
+Formuls: Formula - Confidence (A ==> B) = Support (A and B) / Support (A)
+####4. Lift: If someone buys Product A,  what % of chance of buying product B would increase.
+Formula - Lift (A ==> B) = Confidence (A ==> B) / Support (B)
