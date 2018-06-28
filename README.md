@@ -1,6 +1,6 @@
 # **MARKET BASKET ANALYSIS**(MBA)
 ### WHY?
-#### MBA is a Modeling Technique :-> If a customer picks a product 'P1' what is the probability that he buys product 'P2'. and if the probability is high place the products side by side.This technique describes the association between items in a shopping center.
+#### MBA is a Modeling Technique : If a customer picks a product 'P1' what is the probability that he buys product 'P2'. and if the probability is high place the products side by side.This technique describes the association between items in a shopping center.
 ##Technical Term
 #What is the probability that i will buy item Y after i have already bought item X
 ##X &rarr; Y
@@ -14,7 +14,9 @@ where we call ***x*** as **antecedent** and call ***y*** as **precedent**.
 4. C4 &rarr; Bread,Milk
 5. C5 &rarr; Milk,Jam
 
-####In this transaction summary we see that total sales for Bread is 4, Butter is 3 , Jam is 3 and Milk is 3
+####In this transaction summary we see that total sales for Bread is 4, Butter is 3 , Jam is 3 and Milk is 3.
+
+
 
 The probable rules could for the above mention transaction could be:
 
@@ -33,9 +35,24 @@ The probable rules could for the above mention transaction could be:
 
 ###Terminologies
 
-#####1. Frequent Item set: Items which are bought most frequently e.g Bread occuers in 80%(4 divides 5) of purchases
-#####2. Support: The fraction of which our item set appeared in the total number of transaction. e.g the support for Bread & Butter is the number of times they together appeared in a data set to the total number of transaction(3/5 =.06 )
+#####1. Frequent Item set: Items which are bought most frequently e.g Bread occuers in 80%(4 divides 5) of purchases.
+#####2. Support: The fraction of which our item set appeared in the total number of transaction. e.g the support for Bread & Butter is the number of times they together appeared in a data set to the total number of transaction(3/5 =.06 ).
 #####3. Confidence :  is conditional probability that customer buy product A will also buy product B. It measures how often items B appear in transactions that contain A.
 Formuls: Formula - Confidence (A ==> B) = Support (A and B) / Support (A)
 ####4. Lift: If someone buys Product A,  what % of chance of buying product B would increase.
 Formula - Lift (A ==> B) = Confidence (A ==> B) / Support (B)
+
+
+# what we want  out of MBA
+In market basket analysis, we pick rules with a lift of more than one because the presence of one product increases the probability of the other product(s) on the same transaction. Rules with higher confidence are ones where the probability of an item appearing on the RHS is high given the presence of the items on the LHS.
+
+##Load your excel data to R :
+###read the excel data and cleansing
+library(readxl)<br />
+retail=read_excel("D:\\R\\MARKET_BASKET_ANALYSIS\\inputs\\Online_Retail.xlsx")<br />
+\#removes NAs or missing values from a data frame<br />
+retail <- retail[complete.cases(retail), ]<br />
+summary(retail)<br />
+retail<br />
+
+
