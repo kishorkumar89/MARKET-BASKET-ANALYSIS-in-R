@@ -41,3 +41,6 @@ topRules <- rules[1:10]
 library(arulesViz)
 plot(topRules)
 plot(topRules,method="graph",interactive=TRUE,shading=NA)
+plot(topRules, method="grouped")
+# rrules:
+write.csv(rules,"D:\\R\\MARKET_BASKET_ANALYSIS\\market_basket_RULES.csv", quote = FALSE, row.names = TRUE)
