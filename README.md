@@ -33,22 +33,27 @@ The probable rules could for the above mention transaction could be:
 11. Milk &rarr; Butter
 12. Milk &rarr; Jam
 
-###Terminologies
+### Terminologies
 
-#####1. Frequent Item set: Items which are bought most frequently e.g Bread occuers in 80%(4 divides 5) of purchases.
-#####2. Support: The fraction of which our item set appeared in the total number of transaction. e.g the support for Bread & Butter is the number of times they together appeared in a data set to the total number of transaction(3/5 =.06 ).
-#####3. Confidence :  is conditional probability that customer buy product A will also buy product B. It measures how often items B appear in transactions that contain A.
+##### 1. Frequent Item set: Items which are bought most frequently e.g Bread occuers in 80%(4 divides 5) of purchases.
+##### 2. Support: The fraction of which our item set appeared in the total number of transaction. e.g the support for Bread & Butter is the number of times they together appeared in a data set to the total number of transaction(3/5 =.06 ).
+##### 3. Confidence :  is conditional probability that customer buy product A will also buy product B. It measures how often items B appear in transactions that contain A.
 Formuls: Formula - Confidence (A ==> B) = Support (A and B) / Support (A)
-####4. Lift: If someone buys Product A,  what % of chance of buying product B would increase.
+##### 4. Lift: If someone buys Product A,  what % of chance of buying product B would increase.
 Formula - Lift (A ==> B) = Confidence (A ==> B) / Support (B)
 
 
 # what we want  out of MBA
 In market basket analysis, we pick rules with a lift of more than one because the presence of one product increases the probability of the other product(s) on the same transaction. Rules with higher confidence are ones where the probability of an item appearing on the RHS is high given the presence of the items on the LHS.
 
-##Load your excel data to R :
-###read the excel data and cleansing
+## Program
+### Before the start of the program set the Current Working Directory to the directory in which you are working if its not default
+setwd(" your current working directory")
+### Load your excel data to R :
 library(readxl)<br />
+### read the excel data and cleansing
+library(readxl)<br />
+retail=read_excel("D:\\R\\MARKET_BASKET_ANALYSIS\\inputs\\Online_Retail.xlsx")<br />
 retail=read_excel("D:\\R\\MARKET_BASKET_ANALYSIS\\inputs\\Online_Retail.xlsx")<br />
 \#removes NAs or missing values from a data frame<br />
 retail <- retail[complete.cases(retail), ]<br />

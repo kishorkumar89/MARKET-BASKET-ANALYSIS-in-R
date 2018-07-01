@@ -3,7 +3,7 @@ setwd("D:/R/MARKET_BASKET_ANALYSIS")
 
 #read the excel data
 library(readxl)
-retail=read_excel("inputs/Online_Retail.xlsx")
+retail=read_excel("inputs/part_one.xlsx")
 
 #removes NAs or missing values from a data frame
 retail <- retail[complete.cases(retail), ]
@@ -29,14 +29,14 @@ write.csv(itemList,"output/market_basket2.csv", quote = FALSE, row.names = TRUE)
 
 tr <- read.transactions('output/market_basket2.csv', format = 'basket', sep=',')
 tr
-summary(tr)
+inspect(tr)
 
 
 rules <- apriori(tr, parameter = list(supp=0.001, conf=0.8,maxlen=20))
 rules <- sort(rules, by='confidence', decreasing = TRUE)
-#summary(rules)
-#inspect(rules[1:10])
-topRules <- rules[1:10]
+
+#inspect(rules[1:101])
+topRules <- rules[1:100]
 library(grid)
 library(arulesViz)
 #plot(topRules)
