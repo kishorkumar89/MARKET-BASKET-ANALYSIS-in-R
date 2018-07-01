@@ -1,4 +1,4 @@
-# **MARKET BASKET ANALYSIS**(MBA)
+>># MARKET BASKET ANALYSIS (MBA) in R
 ### WHY?
 #### MBA is a Modeling Technique : If a customer picks a product 'P1' what is the probability that he buys product 'P2'. and if the probability is high place the products side by side.This technique describes the association between items in a shopping center.
 ##Technical Term
@@ -50,9 +50,9 @@ In market basket analysis, we pick rules with a lift of more than one because th
 
 ## Program
 ### Before the start of the program set the Current Working Directory to the directory in which you are working if its not default
-setwd(" your current working directory")
+>setwd(" your current working directory")
 ### Load your excel data to R :
-library(readxl)<br />
+>library(readxl)<br />
 ### Reading the excel file 
 library(readxl)<br />
 retail=read_excel("inputs\\Online_Retail.xlsx")<br />
