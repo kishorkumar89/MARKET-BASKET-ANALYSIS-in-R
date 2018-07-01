@@ -51,13 +51,13 @@ In market basket analysis, we pick rules with a lift of more than one because th
 setwd(" your current working directory")
 ### Load your excel data to R :
 library(readxl)<br />
-### read the excel data and cleansing
+### Reading the excel file 
 library(readxl)<br />
+retail=read_excel("inputs\\Online_Retail.xlsx")<br />
 retail=read_excel("D:\\R\\MARKET_BASKET_ANALYSIS\\inputs\\Online_Retail.xlsx")<br />
-retail=read_excel("D:\\R\\MARKET_BASKET_ANALYSIS\\inputs\\Online_Retail.xlsx")<br />
-\#removes NAs or missing values from a data frame<br />
+### Cleansing the Excel file i.e removing NAs or any row that contains null<br />
 retail <- retail[complete.cases(retail), ]<br />
 summary(retail)<br />
-retail<br />
+
 
 
