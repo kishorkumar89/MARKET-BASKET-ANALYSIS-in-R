@@ -14,11 +14,11 @@ where we call ***x*** as **antecedent** and call ***y*** as **precedent**.
 4. C4 &rarr; Bread,Milk
 5. C5 &rarr; Milk,Jam
 
-####In this transaction summary we see that total sales for Bread is 4, Butter is 3 , Jam is 3 and Milk is 3.
+#### In this transaction summary we see that total sales for Bread is 4, Butter is 3 , Jam is 3 and Milk is 3.
 
 
 
-The probable rules could for the above mention transaction could be:
+#### The probable rules could for the above mention transaction could be:
 
 1. Bread  &rarr; Butter  
 2. Bread &rarr; Jam
@@ -32,6 +32,8 @@ The probable rules could for the above mention transaction could be:
 10. Milk &rarr; Bread
 11. Milk &rarr; Butter
 12. Milk &rarr; Jam
+13. Bread , Butter &rarr; Jam
+#### ***etc
 
 ### Terminologies
 
